@@ -38,7 +38,7 @@ jobs:
           pip install nflreadpy pandas numpy requests scipy statsmodels pyarrow tabulate
 
       - name: Run weather audit
-        run: python .github/weather-audit/audit.py
+        run: python .github/weather-audit/runner.py
 
       - name: Commit audit outputs to temporary branch
         if: success() && github.event_name == 'push'
